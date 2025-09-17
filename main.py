@@ -20,13 +20,28 @@ df["delta"] = df["2025"] - df["2020"]
 highest_increase_country = df.loc[df["delta"].idxmax()]
 top5_highest_increase_countries = df.nlargest(5, "delta")
 
+# Create a graph that shows the GDP of each year for the top 5 countries
+years = ["2020", "2021", "2022", "2023", "2024", "2025"]
+
+fig, ax = plt.subplots(figsize=(8,5))
+
+for _, row in top5_highest_increase_countries.iterrows():
+    ax.plot(years, row[years] / 1_000_000, marker="o", label=row["Country"])
+
+ax.set_ylim(0, top5_highest_increase_countries[years].max().max() / 1_000_000 * 1.1)
+ax.set_ylabel("GDP (in millions)")
+ax.set_xlabel("Year")
+ax.set_title("Top 5 Countries - GDP by Year")
+ax.legend(title="Country", bbox_to_anchor=(1.05, 1), loc="upper left")
+
+plt.tight_layout()
+plt.show()
+
 print("The country with the highest GDP growth between 2020 and 2025 is:")
 print(highest_increase_country[["Country", "2020","2025", "delta"]])
 print()
 print("The top 5 countries with the highest GDP growth between 2020 and 2025 are:")
 print(top5_highest_increase_countries[["Country", "2020","2025", "delta"]])
-
-# print(df[["Country", "2020", "2025", "delta"]])
 
 # Please submit a link to your GitHub project. Do not submit your project files here!
 #
