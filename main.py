@@ -2,10 +2,18 @@
 # Nicholas Kitchen
 # Mini Project 2
 
-# My question: Which country has had the highest increase in GDP between the years 2020 and 2025 (inclusive)?
+# My question: Which country has had the highest increase in GDP from 2020 and 2025?
+# Note: If a country does not have data available for 2020 or 2025, they will be excluded.
 
 import pandas as pd
 
+# Read in csv dataset
+df = pd.read_csv("./data/2020-2025.csv")
+
+# Create a new column "delta" to find the change between GDP in 2020 and 2025
+df["delta"] = df["2025"] - df["2020"]
+
+print(df[["Country", "2020", "2025", "delta"]].head())
 
 # Please submit a link to your GitHub project. Do not submit your project files here!
 #
