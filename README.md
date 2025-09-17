@@ -5,64 +5,43 @@
  
 # Project Title
  
-Simple overview of use/purpose.
+Mini Project 2 Highest GDP Growth
  
 ## Description
  
-An in-depth paragraph about your project and overview of use.
+This program will answer the two questions, "Which country had the highest increase in GDP from 2020 to 2025? What were the top 5?" Using a dataset from Kaggle.com, this program will find the top 5 countries who saw the largest GDP growth and create two graphs. One will show the GDP growth top 5 countries from 2020 to 2025. The second will show the overall change in GDP from 2020 to 2025 for each of the top 5 countries. The program will also print the answer to the two questions.
  
 ## Getting Started
  
 ### Dependencies
- 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* List pip install instructions.
- 
+Please install the pip requirements:
+```
+pip install -r requirements.txt
+```
+
 ### Installing
  
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+Please follow these steps to download the csv file to run the program:
+1. Download the csv file from [Kaggle](https://www.kaggle.com/datasets/codebynadiia/gdp-per-country-20202025).
+2. Create a folder called 'data' in the project's root folder.
+3. Move the csv file into that folder.
  
 ### Executing program
- 
-* How to run the program
-* Step-by-step bullets
 ```
-code blocks for commands
-```
- 
-## Help
- 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+python main.py
 ```
  
 ## Authors
  
-Contributors names and contact info
- 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Nicholas Kitchen
  
 ## Version History
- 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
+
 * 0.1
     * Initial Release
  
-## License
- 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
- 
 ## Acknowledgments
- 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+
+* [Matplotlib Documentation](https://matplotlib.org/stable/api/index)
+* [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)
+* [Kaggle - GDP per Country 2020-2025](https://www.kaggle.com/datasets/codebynadiia/gdp-per-country-20202025)
