@@ -10,7 +10,16 @@ Mini Project 2 Highest GDP Growth
 ## Description
  
 This program will answer the two questions, "Which country had the highest increase in GDP from 2020 to 2025? What were the top 5?" Using a dataset from Kaggle.com, this program will find the top 5 countries who saw the largest GDP growth and create two graphs. One will show the GDP growth top 5 countries from 2020 to 2025. The second will show the overall change in GDP from 2020 to 2025 for each of the top 5 countries. The program will also print the answer to the two questions.
- 
+
+***Note: If a country does not have data available for 2020 or 2025, they will be excluded. As of 9/17/2025, the following do not have sufficient data:***
+* Afghanistan 
+* Eritrea 
+* Lebanon 
+* Pakistan 
+* Sri Lanka 
+* Syria 
+* Palestine
+
 ## Getting Started
  
 ### Dependencies
