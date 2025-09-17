@@ -6,6 +6,7 @@
 # Note: If a country does not have data available for 2020 or 2025, they will be excluded.
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 # Read in csv dataset
 df = pd.read_csv("./data/2020-2025.csv")
@@ -33,6 +34,21 @@ ax.set_ylabel("GDP (in millions)")
 ax.set_xlabel("Year")
 ax.set_title("Top 5 Countries - GDP by Year")
 ax.legend(title="Country", bbox_to_anchor=(1.05, 1), loc="upper left")
+
+plt.tight_layout()
+plt.show()
+
+# Create a graph that shows the GDP growth of the top 5 countries from 2020 to 2025
+fig, ax = plt.subplots(figsize=(6,4))
+ax.bar(top5_highest_increase_countries["Country"], top5_highest_increase_countries["delta"] / 1_000_000)
+
+ax.set_ylabel("Delta (in millions)")
+ax.set_xlabel("Country")
+ax.set_title("GDP Growth from 2020 to 2025")
+plt.xticks(rotation=30, ha="right")
+
+ax.set_ylim(0, 10)
+ax.set_yticks(np.arange(0, 11, 1))
 
 plt.tight_layout()
 plt.show()
